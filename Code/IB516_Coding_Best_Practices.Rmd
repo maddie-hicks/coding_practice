@@ -1,0 +1,44 @@
+---
+title: "IB516_Coding_Best_Practices"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+IB 516 Analytical Workflows
+Coding Demonstration - Coding Best Practices
+
+Clear the workspace and close all graphic devices (two right panels in RStudio).
+
+```{r}
+rm(list = ls())
+graphics.off()
+```
+
+Generate some data.
+x is an independent variable
+
+```{r}
+x <- rnorm(n = 100, mean = 0, sd = 1)
+```
+
+z is noise
+
+```{r}
+z <- rnorm(n = 100, mean = 0, sd = 1)
+```
+
+y is equation
+
+```{r}
+y <- 2.2 * x + 1.1 + z
+```
+
+Plot the equation.
+
+```{r}
+plot(x, y)
+```
+
