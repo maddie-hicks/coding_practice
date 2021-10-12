@@ -17,6 +17,18 @@ rm(list = ls())
 graphics.off()
 ```
 
+Set the working directory.  Type this in the Console instead of in the code itself because it will be
+
+```{r}
+getwd()
+```
+If the working directory needs to be moved use the setwd() function.  The working directory should be your "Coding" folder in your repository.
+
+```{r}
+setwd("~\GitHub\coding_practice")
+```
+The working directory should be your "Coding" folder in your repository and then use ..\ to get out of "Coding" and into your "Data" folder to read in data.
+
 Generate some data.
 x is an independent variable
 
@@ -36,9 +48,29 @@ y is equation
 y <- 2.2 * x + 1.1 + z
 ```
 
-Plot the equation.
+Plot the equation to debug it.  Undo # if want to plot.
 
 ```{r}
-plot(x, y)
+#plot(x, y)
+```
+
+Do linear regression of y and x.
+
+```{r}
+regression <- lm(y ~ x)
+```
+
+This is the real plot that is nice looking and publishable.  This is using plot instead of ggplot.  If using ggplot make sure to install appropriate package at the beginning of the R markdown file.
+
+```{r}
+par(mar = c(6, 7, 4, 1))
+```
+
+In the ylab you can include \n in the label title and it will put everything after it on the next line.
+
+```{r}
+plot(x, y,
+     xlab = "Normalized Velocity",
+     ylab = "Normalized\nEnergy Consumption")
 ```
 
