@@ -17,17 +17,15 @@ rm(list = ls())
 graphics.off()
 ```
 
-Set the working directory.  Type this in the Console instead of in the code itself because it will be
+Set the working directory.
 
 ```{r}
 getwd()
 ```
-If the working directory needs to be moved use the setwd() function.  The working directory should be your "Coding" folder in your repository.
+If the working directory needs to be moved use the setwd() function.  The working directory should be your "Coding" folder in your repository.  If you need to set your working directory do it in the Console instead of a code chunk.
 
-```{r}
-setwd("~\GitHub\coding_practice")
-```
-The working directory should be your "Coding" folder in your repository and then use ..\ to get out of "Coding" and into your "Data" folder to read in data.
+The working directory should be your "Coding" folder in your repository and then use ..\ (or maybe .\) to get out of "Coding" and into your "Data" folder to read in data.
+
 
 Generate some data.
 x is an independent variable
